@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend/demo
+    container_name: backend
+    restart: always
+    ports:
+      - '8080:8080'
+  frontend:
+    build: ./frontend
+    restart: always
+    ports:
+      - 3000:3000
+    links:
+      - 'backend:backend'
+  # appdb:
+  #   image: mongo
+  #   container_name: appdb
+  #   restart: always
+  #   ports:
+  #     - 27017:27017
+  #   volumes:
+  #     - /data/db
+  #     - /data/configdb
+  #   command: mongod
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: admin
+  #     MONGO_INITDB_ROOT_PASSWORD: password
+  #     MONGO_INITDB_DATABASE: 'account'

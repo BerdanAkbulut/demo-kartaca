@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rubik+Moonrocks&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fontHandWriting {
+  font-family: 'Indie Flower', cursive;
+}
+
+.center-div {
+  width: 400px;
+  height: 600px;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  margin: auto;
+}
+.center-immediate {
+  margin-top: 2px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
